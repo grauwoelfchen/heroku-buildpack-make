@@ -4,6 +4,19 @@
 ## Usage
 
 ```zsh
+% cat .buildpacks
+https://gitlab.com/grauwoelfchen/heroku-buildpack-make#v0.1
+...
+
+% git push heroku release:master
+...
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Multipack app detected
+remote: =====> Downloading Buildpack: https://gitlab.com/grauwoelfchen/heroku-buildpack-make
+remote: =====> Detected Framework: Makefile
+remote: -----> Compiling with Make
 ```
 
 
