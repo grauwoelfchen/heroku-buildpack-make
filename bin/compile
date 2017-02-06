@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+# % bin/compile <build-dir> <cache-dir>
+
+set -e
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+cd $BUILD_DIR
+
+echo "-----> Compiling with Make"
+make 2>&1 | indent
